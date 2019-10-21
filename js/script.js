@@ -8,7 +8,7 @@ var dogs = [
      color : "White and tan",
      height: 20,
      age : 7,
-     photos: "images/chiwhawha.jpeg"
+     photo: "images/chiwhawha.jpeg"
 
 
  },
@@ -19,7 +19,7 @@ var dogs = [
     color : "Black",
     height: 30,
     age : 4,
-    photos: "images/frenchBull.jpg"
+    photo: "images/frenchBull.jpg"
 
 
 },
@@ -30,7 +30,7 @@ var dogs = [
     color : "White and grey",
     height: 60,
     age : 2,
-    photos: "images/husky.jpeg"
+    photo: "images/husky.jpeg"
 
 
 },
@@ -41,7 +41,7 @@ var dogs = [
     color : "Black and brown",
     height: 50,
     age : 9,
-    photos: "images/germanSheppard.jpg"
+    photo: "images/germanSheppard.jpg"
 
 
 },
@@ -52,8 +52,61 @@ var dogs = [
     color : "Black and tan",
     height: 15,
     age : 5,
-    photos: "images/pug.jpg"
+    photo: "images/pug.jpg"
 
 
 },
 ];
+//all dogs
+
+function allDogs(){
+    document.getElementById('dogs').innerHTML = " "; //to clear the container
+for(var i=0; i < dogs.length; i++){
+    document.getElementById('dogs').innerHTML 
+    + '<br><h1 class="jumbotron text-danger">' + dogs[i].name + '</h1>'
+    +'<div class="row">'
+    + '<div class="col">'
+    + '<img class="img-thumbnail myDogs" src="' + dogs[i].photo + '" alt="dog"/>'
+    + '</div>'
+    + '<br><br> Breed : <br> <h5 class="text-danger">' + dogs[i].breed + '</h5>'
+    + '<br><br> Age : <br> <h5 class="text-danger">' + dogs[i].age + '</h5>'
+    +'<br><br> Height : <br> <h5 class="text-danger">' + dogs[i].height + '</h5>'
+    + '</div>'
+    + '</div>';
+}
+
+document.getElementById('pugs').addEventListener('click', function(){
+    document.getElementById('dogs').innerHTML = " "; //to clear the container
+    for(var i=0; i < dogs.length; i++){
+        if (dogs[i].height <= 25){
+        document.getElementById('dogs').innerHTML 
+        + '<br><h1 class="jumbotron text-danger">' + dogs[i].name + '</h1>'
+        +'<div class="row">'
+        + '<div class="col">'
+        + '<img class="img-thumbnail myDogs" src="' + dogs[i].photo + '" alt="dog"/>'
+        + '</div>'
+        + '<br><br> Breed : <br> <h5 class="text-danger">' + dogs[i].breed + '</h5>'
+        + '<br><br> Age : <br> <h5 class="text-danger">' + dogs[i].age + '</h5>'
+        +'<br><br> Height : <br> <h5 class="text-danger">' + dogs[i].height + '</h5>'
+        + '</div>'
+        + '</div>';
+    }
+    }
+
+});
+
+document.getElementById('changeName').addEventListener('click', function(){
+    var oldName = document.getElementById('oldName').value;
+    var newName = document.getElementById('newName').value;
+    for(var i=0; i < dogs.length; i++){
+        if(oldName === dogs[i].name){
+            dogs[i].name = newName;
+        }
+    }
+ console.log(dogs);
+  allDogs();
+});
+
+document.getElementById('all').addEventListener('click', function(){
+    allDogs();
+});

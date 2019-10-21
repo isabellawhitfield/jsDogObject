@@ -1,0 +1,19 @@
+* {
+    padding: auto;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: blueviolet;
+    
+}
+
+
+
+
+.myDogs {
+    width: 200px;
+}
+.myDogs:hover{
+    border: 2px solid pink;
+}
+
+.myDogs
