@@ -12,21 +12,43 @@
   </head>
   <body class="container bg-secondary text-primary">
     <h1 class="display-4">Dogs</h1>
-
-    <button id="pugs" type="button" class="btn btn-primary">PugsS</button>
-    <button id="all" type="button" class="btn btn-primary"> All Dogs</button>
-   <div class="border border-info">
-    <p class="textInfo" >If you want to change the the name of the dogs, enter them below</p>
-    <br><br>
-    <label for="oldName" class="text info-h3">Enter the old name</label>
-    <input type="text" id="oldName" placeholder="Enter the old name"/>
+      <button id="all" type="button" class="btn btn-primary"> All Dogs</button>
     
-    <br><br>
-    <label for="newName" class="text info-h3">Enter the new name</label>
-    <input type="text" id="newName" placeholder="Enter the new name"/>
-    <button id="changeName" type="button" class="btn btn-info">Change Name</button>
-  </div> 
-    <div id="dogs"></div>
+
+    <button id="bullDog" type="button" class="btn btn-primary"> Bull dog</button>
+    <button id="height40" type="button" class="btn btn-primary"> Height>40</button>
+    </br>
+    </br>
+
+    <!-- user input -->
+    <div class="border border-info">
+      <h1 class="text-info "> If you want to change the name of the dogs, then enter them below</h1>
+      </br></br>
+      <label for="oldName" class="text-info h3"> Enter the old name </label> </br>
+      <input type="text" class="form-control" id="oldName" placeholder="Enter the old name"/>
+      </br>
+      <label for="newName" class="text-info h3" > Enter a new name </label> </br>
+
+      <input type="text" class="form-control" id="newName" placeholder="Enter a new name"/>
+      </br>
+      <button id="changeName" type="button" class="btn btn-info"> Change Name</button>
+    </div>
+
+
+    <!-- dogs -->
+    <div id="dogs"> </div>
+
+    <div class="myModal">
+      <div class="closeBar bg-primary text-danger text-center">
+        &times;
+      </div>
+      <div id="modalContent" class="">
+          Modal Pop up
+
+      </div>
+      
+
+    </div>
 
 
     <!-- Optional JavaScript -->
@@ -34,8 +56,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
 
     </script>
   </body>
 </html>
+
